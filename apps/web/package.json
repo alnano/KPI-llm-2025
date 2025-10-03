@@ -10,7 +10,7 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "typecheck": "tsc --noEmit",
-    "boostrap": "pnpm install --ignore-scripts --frozen-lockfile"
+    "install": "pnpm install --ignore-scripts --frozen-lockfile"
   },
   "dependencies": {
     "@workspace/ui": "workspace:*",

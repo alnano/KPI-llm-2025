@@ -12,21 +12,22 @@ Implement a user dashboard.
     - web: nextjs frontend
 - packages
     - ui: shadcn component library
-    - docker: dockerized database setup 
+    - docker: dockerized database setup
 
 ## Getting started
-Use the monorepo setup. 
-Run: **pnpm turbo run install** 
+Use the monorepo setup.
+-  uv run python apps/api/seed.py (seed database)
+Run: **pnpm turbo run install**
 - installs dependencies for nextjs (/apps/web)
 - installs dependencies for fastapi (/apps/api)
 
-Run: **pnpm turbo run dev** 
+Run: **pnpm turbo run dev**
 - spins up docker-compose /packages/docker
     - 5432 for database
     - 8080 for adminer (db ui)
 - starts fastapi dev server
 - starts next applicaiton in dev
- 
+
 
 ## Frontend component library
 ### Usage
@@ -56,6 +57,3 @@ To use the components in your app, import them from the `ui` package.
 ```tsx
 import { Button } from "@workspace/ui/components/button"
 ```
-
-
-
