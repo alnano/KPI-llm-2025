@@ -38,6 +38,15 @@ export default function LoginPage() {
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
+
+        if (
+          res.status === 409 ||
+          data.detail?.toLowerCase().includes("registered")
+        ) {
+          setError("An account with this email already exists.");
+          return;
+        }
+
         setError(
           data.detail ||
             "Could not sign up. Please check your info and try again.",
@@ -48,7 +57,7 @@ export default function LoginPage() {
       location.href = "/dashboard";
     } catch (err) {
       console.error(err);
-      setError("Network error. Please try again.");
+      setError(`Network error. Please try again.`);
     } finally {
       setLoading(false);
     }
