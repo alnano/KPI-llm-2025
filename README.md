@@ -1,10 +1,3 @@
-# shadcn/ui monorepo template
-
-## Task
-Implement user authentication.
-Implement a user dashboard.
-
-
 
 ## General structure
 - apps
